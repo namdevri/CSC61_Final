@@ -50,16 +50,24 @@ def parse_single(img, ann):
 #  write_dir = directory to write new images
 
 def overlay_annotations(annotations_dir, image_dir, write_dir):
-    #list of all annotation paths
-    annotations = ["{}{}".format(annotations_dir, file) for file in os.listdir(annotations_dir)]
-    #list of all image paths
-    images = ["{}{}".format(image_dir, file) for file in os.listdir(image_dir)]
+    #rename each file so we can sort
+    for file in os.listdir(annotations_dir):
+        os.rename(annotations_dir + file, annotations_dir + file.split("_")[1])
+    for file in os.listdir(image_dir):
+        os.rename(image_dir + file, image_dir + file.split("_")[1])
+    #get list of files
+    images = [file for file in os.listdir(image_dir)]
+    annotations = [file for file in os.listdir(annotations_dir)]
+    #sort files
+    images.sort()
+    annotations.sort()
+
     #iterate over annotations and images together
     for ann, img in zip(annotations, images):
         #overlay the border box
-        bordered_img = parse_single(img, ann)
+        bordered_img = parse_single(image_dir + img, annotations_dir + ann)
         #write to outdir
-        cv2.imwrite("{}/{}_annotated.jpg".format(write_dir, os.path.basename(img)), bordered_img)
+        cv2.imwrite("{}/{}_annotated.jpg".format(write_dir, img), bordered_img)
 
 
 #example usage
