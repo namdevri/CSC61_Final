@@ -40,7 +40,6 @@ You should now be able to load your data from google drive.  Here's a sample usi
 train_set = datasets.ImageFolder("/content/gdrive/My Drive/jpegs/jpegs/train", transform=transformations)
 validate_set = datasets.ImageFolder("/content/gdrive/My Drive/jpegs/jpegs/validate", transform=transformations)
 ```
-Runtime>Change runtime type
 ### Visualizing boundary boxes
 
 Download/clone GitHub project at: https://github.com/Shenggan/BCCD_Dataset
