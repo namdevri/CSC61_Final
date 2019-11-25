@@ -13,14 +13,14 @@ else:
 ```
 A simple workaround is utilizing Google Colab's free cuda enabled GPU to drastically speed up the training process.
 
-#initial setup
+#### initial setup
 * Zip all training and test files
 * Navigate to https://drive.google.com/drive and upload the zip file
 * Navigate to https://colab.research.google.com and create a new notebook
 * Press runtime at the top, click change runtime, then select GPU
 * Re-run the above code snippet to ensure cuda is enabled
 
-#mount dataset
+##### mount dataset
 
 Run the following code and complete the OAuth process prompted by running this code
 ```
