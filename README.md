@@ -51,3 +51,5 @@ You may need to change path to jpeg/annotation files in order to visualize
 
 ### Useful Links
 * https://medium.com/udacity-pytorch-challengers/a-brief-overview-of-loss-functions-in-pytorch-c0ddb78068f7
+* https://pytorch.org/docs/stable/torchvision/transforms.html
+
