@@ -48,6 +48,25 @@ Visualization script at BCCD_Dataset/scripts/visualize.py
 
 You may need to change path to jpeg/annotation files in order to visualize
 
+### Calculated Training Dataset Mean/STD
+
+mean: [0.6786, 0.6413, 0.6605]
+std: [0.2012, 0.2080, 0.1997]
+
+Method:
+```
+import torch
+import torchvision.datasets as datasets
+import torchvision.transforms as transforms
+
+train_root = "/home/nate/Downloads/blood-cells (2)/dataset2-master/dataset2-master/images/TRAIN"
+
+traindata = datasets.ImageFolder(train_root, transforms.ToTensor())
+image_means = torch.stack([t.mean(1).mean(1) for t, c in traindata])
+img_stds = torch.stack([t.std(1).mean(1) for t, c in traindata])
+print(image_means.mean(0))
+print(img_stds.mean(0))
+```
 
 ### Useful Links
 * https://medium.com/udacity-pytorch-challengers/a-brief-overview-of-loss-functions-in-pytorch-c0ddb78068f7
