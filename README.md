@@ -50,8 +50,8 @@ You may need to change path to jpeg/annotation files in order to visualize
 
 ### Calculated Training Dataset Mean/STD
 
-mean: [0.6786, 0.6413, 0.6605]
-std: [0.2012, 0.2080, 0.1997]
+* mean: [0.6786, 0.6413, 0.6605]
+* std: [0.2012, 0.2080, 0.1997]
 
 Method:
 ```
