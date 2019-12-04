@@ -57,6 +57,7 @@ You may need to change path to jpeg/annotation files in order to visualize
 * add regularization parameter to Adam optimizer(.001)
 * Investigate larger numbers of epochs
 * Stratified CV
+* Explore unused optional parameters 
 
 ### Calculated Training Dataset Mean/STD
 
