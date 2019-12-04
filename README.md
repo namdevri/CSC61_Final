@@ -48,6 +48,16 @@ Visualization script at BCCD_Dataset/scripts/visualize.py
 
 You may need to change path to jpeg/annotation files in order to visualize
 
+## To Do
+* Plot hyper parameters vs epochs during training/validation
+* Test various loss functions
+* Plot test and validation errors vs. epoch count
+* Use cloud platform to improve training
+* Plot train and validation vs epochs
+* add regularization parameter to Adam optimizer(.001)
+* Investigate larger numbers of epochs
+* 
+
 ### Calculated Training Dataset Mean/STD
 
 * mean: [0.6786, 0.6413, 0.6605]
