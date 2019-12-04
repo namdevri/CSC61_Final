@@ -56,7 +56,7 @@ You may need to change path to jpeg/annotation files in order to visualize
 * Plot train and validation vs epochs
 * add regularization parameter to Adam optimizer(.001)
 * Investigate larger numbers of epochs
-* 
+* Stratified CV
 
 ### Calculated Training Dataset Mean/STD
 
