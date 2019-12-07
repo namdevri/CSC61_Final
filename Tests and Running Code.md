@@ -5,15 +5,21 @@
 t_epochs = [25]
 t_batches = [800]
 t_val = 0.2
+best_acc = 0
+best_results = []
 
 while 0==0:
     for i in t_epochs:
         for j in t_batches:
-            layers = (random.randint(100,3001),random.randint(100,3001),random.randint(100,3001),random.randint(100,3001),random.randint(100,3001))
+            layers = [random.randint(100,3001),random.randint(100,3001),random.randint(100,3001),random.randint(100,3001),random.randint(100,3001)]
             print('\nLoss Function: NLLLoss \tNumber of Epochs: {} \tBatch Size: {} \tValidation Percent: {}'.format(i,j,t_val))
             print('Images resized to 30x40px.')
             print("Layers: \t{}".format(layers))
-            train_network(epochs=i, val_percent=t_val, train_batch_size=j, test_batch_size=j, eval_freq=1, layer_widths=layers)
+            acc = train_network(epochs=i, val_percent=t_val, train_batch_size=j, test_batch_size=j, eval_freq=1, layer_widths=layers)
+            if acc > best_acc:
+                best_acc = acc
+                print("******************************************************** NEW BEST ACCURACY: {:.6f}".format(best_acc))
+                print("******************************************************** LAYER WIDTHS:      {}".format(layers))
 ```
 ---
 
