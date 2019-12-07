@@ -1,18 +1,20 @@
-#CURRENTLY RUNNING CODE:#
+# Currently Running Code:
 
-Joe:
+## Joe:
+```
+t_epochs = [25,50,100,200,400]
+t_batches = [50,100,200,400,800]
+t_val = 0.2
 
-    t_epochs = [25,50,100,200,400]
-    t_batches = [50,100,200,400,800]
-    t_val = 0.2
-
-    for i in t_epochs:
-        for j in t_batches:
-            print('\nLoss Function: NLLLoss \tNumber of Epochs: {} \tBatch Size: {} \tValidation Percent: {}'.format(i,j,t_val))
-            print('Images resized to 30x40px.')
-            train_network(epochs=i, val_percent=t_val, train_batch_size=j, test_batch_size=j, eval_freq=1)
-
+for i in t_epochs:
+    for j in t_batches:
+        print('\nLoss Function: NLLLoss \tNumber of Epochs: {} \tBatch Size: {} \tValidation Percent: {}'.format(i,j,t_val))
+        print('Images resized to 30x40px.')
+        train_network(epochs=i, val_percent=t_val, train_batch_size=j, test_batch_size=j, eval_freq=1)
+```
 ---
+
+# Results:
 
 Run 17
 
