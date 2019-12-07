@@ -9,7 +9,7 @@ t_val = 0.2
 while 0==0:
     for i in t_epochs:
         for j in t_batches:
-            layers = (random.randint(100,5001),random.randint(100,5001),random.randint(100,5001),random.randint(100,5001),random.randint(100,5001))
+            layers = (random.randint(100,3001),random.randint(100,3001),random.randint(100,3001),random.randint(100,3001),random.randint(100,3001))
             print('\nLoss Function: NLLLoss \tNumber of Epochs: {} \tBatch Size: {} \tValidation Percent: {}'.format(i,j,t_val))
             print('Images resized to 30x40px.')
             print("Layers: \t{}".format(layers))
