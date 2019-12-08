@@ -308,6 +308,43 @@ bestParameters = geneticAlgorithm(population,gen,False)
 
 ```
 
+```
+Beginning setup...
+Setting up train, test, and validation sets...
+Setting up rotations:  1
+Setting up rotations:  2
+Setting up rotations:  3
+Setting up rotations:  4
+Setting up rotations:  5
+Setting up rotations:  6
+Setting up rotations:  7
+Setting up rotations:  8
+Setting up rotations:  9
+Setting up rotations:  10
+Full train set size:  109527
+Train set size:  87622
+Validation set size:  21905
+Test set size:  2487
+Validating... (28/28)        
+Epoch: 1 	Accuracy: 0.595888 	Training Loss: 1.031526 	Validation Loss: 0.916235 
+Epoch: 5 	Accuracy: 0.844151 	Training Loss: 0.344789 	Validation Loss: 0.400831 
+Epoch: 10 	Accuracy: 0.893491 	Training Loss: 0.184469 	Validation Loss: 0.292851 
+Epoch: 15 	Accuracy: 0.907592 	Training Loss: 0.126359 	Validation Loss: 0.256781 
+Epoch: 20 	Accuracy: 0.924098 	Training Loss: 0.098772 	Validation Loss: 0.229357 
+Epoch: 25 	Accuracy: 0.923679 	Training Loss: 0.079746 	Validation Loss: 0.236100 
+Epoch: 30 	Accuracy: 0.932831 	Training Loss: 0.068637 	Validation Loss: 0.207327 
+Epoch: 35 	Accuracy: 0.940119 	Training Loss: 0.061219 	Validation Loss: 0.201531 
+Epoch: 40 	Accuracy: 0.943306 	Training Loss: 0.054756 	Validation Loss: 0.173660 
+Epoch: 45 	Accuracy: 0.945091 	Training Loss: 0.049642 	Validation Loss: 0.186118 
+Epoch: 50 	Accuracy: 0.946827 	Training Loss: 0.046655 	Validation Loss: 0.171174 
+Training... (137/137)
+Testing... (1/4)        
+Testing... (2/4)        
+Testing... (3/4)        
+Testing... (4/4)        
+Final Results:	Accuracy: 0.484310 	Training Loss: 0.078120 	Testing Loss: 2.534515
+```
+
 ## Nate
 
 ### Config
