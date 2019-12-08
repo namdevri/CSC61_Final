@@ -59,6 +59,20 @@ You may need to change path to jpeg/annotation files in order to visualize
 * Stratified CV
 * Explore unused optional parameters 
 
+### Poster Content
+This is what our poster content is going to be graded on. 
+* Context and importance of research demonstrated / 10 
+* Research problem clearly stated / 10
+* Methodology clearly defined and related to Neural Networks and Deep Learning / 10 
+* Results easily interpreted /10
+
+Research Problem & Context: 
+For our project, we decied to Train an artificial neural network to identify different blood cell types present within an in image of blood cells. 
+Our main goal for our project was to be able to identify different blood cell subtypes based on images of blood cells. Diagnosing blood-based diseases typically involves identifying and characterizing the patients blood samples. An automated method being able to detect and classify blood cell subtypes are important applications in the medical field.
+
+Methodology - Training an artificial neural network to identify different blood cell types present within an in image of blood cells. 
+
+
 ### Other implementations
 
 #### Master
