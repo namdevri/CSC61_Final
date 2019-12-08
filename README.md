@@ -89,3 +89,5 @@ print(img_stds.mean(0))
 * https://stackoverflow.com/questions/50544730/how-do-i-split-a-custom-dataset-into-training-and-test-datasets#answer-51768651
 * https://pytorch.org/docs/stable/nn.html#loss-functions
 * https://machinelearningmastery.com/how-to-configure-the-number-of-layers-and-nodes-in-a-neural-network/
+* https://towardsdatascience.com/genetic-algorithm-implementation-in-python-5ab67bb124a6
+* https://en.wikipedia.org/wiki/Genetic_algorithm
