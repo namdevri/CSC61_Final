@@ -59,6 +59,12 @@ You may need to change path to jpeg/annotation files in order to visualize
 * Stratified CV
 * Explore unused optional parameters 
 
+### Other implementations
+
+#### Master
+* https://www.kaggle.com/paultimothymooney/blood-cells/kernels
+### High Accuracy
+* https://www.kaggle.com/drobchak1988/blood-cell-images-acc-92-val-acc-90
 ### Calculated Training Dataset Mean/STD
 
 * mean: [0.6786, 0.6413, 0.6605]
