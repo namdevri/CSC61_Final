@@ -2,24 +2,28 @@
 
 ## Joe:
 ```
-t_epochs = [25]
-t_batches = [800]
+t_epochs = 100
+t_batches = 800
 t_val = 0.2
-best_acc = 0
-best_results = []
 
-while 0==0:
-    for i in t_epochs:
-        for j in t_batches:
-            layers = [random.randint(100,3001),random.randint(100,3001),random.randint(100,3001),random.randint(100,3001),random.randint(100,3001)]
-            print('\nLoss Function: NLLLoss \tNumber of Epochs: {} \tBatch Size: {} \tValidation Percent: {}'.format(i,j,t_val))
-            print('Images resized to 30x40px.')
-            print("Layers: \t{}".format(layers))
-            acc = train_network(epochs=i, val_percent=t_val, train_batch_size=j, test_batch_size=j, eval_freq=1, layer_widths=layers)
-            if acc > best_acc:
-                best_acc = acc
-                print("******************************************************** NEW BEST ACCURACY: {:.6f}".format(best_acc))
-                print("******************************************************** LAYER WIDTHS:      {}".format(layers))
+gen = 20
+population = [[[1966, 264, 2557, 2118, 159],0.513121],
+              [[2846, 1622, 1610, 904, 1704],0.505431],
+              [[2071, 1445, 415, 2881, 851],0.498373],
+              [[1736, 2826, 246, 1294, 2039],0.492680],
+              [[2862, 1980, 2730, 2992, 128],0.492626],
+              [[225, 2699, 1359, 1854, 2259],0.492565],
+              [[1638, 1353, 1522, 1035, 227],0.492435],
+              [[1302, 1379, 1355, 1397, 1308],0.491566],
+              [[2353, 2982, 114, 2300, 439],0.491559],
+              [[597, 1083, 476, 2025, 2133],0.489555]]
+
+#print(population[0][0])
+#print(population[0][1])
+#print(population[0][0][1])
+
+# Note: pretrained=True should be used ONLY if training over 25 epochs with batch size 800, otherwise results will be skewed.
+bestParameters = geneticAlgorithm(population,gen,False)
 ```
 ---
 
