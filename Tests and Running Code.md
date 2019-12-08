@@ -2,6 +2,8 @@
 
 ## Joe:
 ```
+# Image size 30x40
+# Original data + 10 random rotations.
 t_epochs = 50
 t_batches = 800
 t_val = 0.2
