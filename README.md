@@ -74,6 +74,15 @@ Methodology - Training an artificial neural network to identify different blood 
  
 Results - 
 
+* Poster Display. Short text segments / 10
+* Legible pictures, tables and legends (size, font, contrast) / 10
+* Organization and logic appropriate for a broad audience / 10
+* General style, liveliness, & stage presence / 10
+* Effectiveness in answering questions / 10
+* Overall impression of the poster and its presentation / 10
+
+
+
 ### Other implementations
 
 #### Master
