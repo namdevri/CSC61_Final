@@ -70,7 +70,7 @@ Research Problem & Context:
 For our project, we decied to Train an artificial neural network to identify different blood cell types present within an in image of blood cells. Our main goal for our project was to be able to classify different blood cell subtypes based on images of blood cells while using PyTorch. Diagnosing blood-based diseases typically involves identifying and characterizing the patients blood samples. An automated method being able to detect and classify blood cell subtypes are important applications in the medical field.
 
 Methodology - Training an artificial neural network to identify different blood cell types present within an in image of blood cells. 
-We found the Negative Log-Likelihood Loss to be a good loss function to use with our classifcation. 
+We found the Negative Log-Likelihood Loss to be a good loss function to use with our classifcation. Once we found the dataset that we wanted to use, we wanted to find good accuracy as quickly as possible. We went with a DenseNet implementation and attempted to fine tune its layer widths using a genetic algorithm. Most of our process was tuning hyperparamters.
 
 ### Other implementations
 
