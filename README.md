@@ -80,6 +80,8 @@ Results -
 * Effectiveness in answering questions / 10
 * Overall impression of the poster and its presentation / 10
 
+https://www.makesigns.com/SciPosters_Templates.aspx
+
 ---
 
 ## Outline
