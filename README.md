@@ -71,6 +71,8 @@ For our project, we decied to Train an artificial neural network to identify dif
 
 Methodology - Training an artificial neural network to identify different blood cell types present within an in image of blood cells. 
  Once we found the dataset that we wanted to use, we wanted to find good accuracy as quickly as possible. We went with a DenseNet implementation and attempted to fine tune its layer widths using a genetic algorithm. Most of our process was tuning hyperparamters. We all would separately test different numbers of epochs, batch sizes, and random layer widths to try and find a good set of hyperparamters to use. Testing different loss functions with our paramaters was something we also did until We found the Negative Log-Likelihood Loss to use with our classifcation. 
+ 
+Results - 
 
 ### Other implementations
 
