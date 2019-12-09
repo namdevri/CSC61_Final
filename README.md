@@ -67,10 +67,9 @@ This is what our poster content is going to be graded on.
 * Results easily interpreted /10
 
 Research Problem & Context: 
-For our project, we decied to Train an artificial neural network to identify different blood cell types present within an in image of blood cells. Our main goal for our project was to be able to classify different blood cell subtypes based on images of blood cells while using PyTorch. Diagnosing blood-based diseases typically involves identifying and characterizing the patients blood samples. An automated method being able to detect and classify blood cell subtypes are important applications in the medical field. This dataset contains 12,500 augmented images of blood cells (JPEG) with accompanying cell type labels (CSV). There are approximately 3,000 images for each of 4 different cell types grouped into 4 different folders (according to cell type). The cell types are Eosinophil, Lymphocyte, Monocyte, and Neutrophil. 
+For our project, we decied to train an artificial neural network to identify different blood cell types present within images of blood cells. Our main goal for our project was to be able to classify different blood cell subtypes based on images of blood cells while using PyTorch. Diagnosing blood-based diseases typically involves identifying and characterizing the patients blood samples. An automated method being able to detect and classify blood cell subtypes are important applications in the medical field. This dataset contains 12,500 augmented images of blood cells (JPEG) with accompanying cell type labels (CSV). There are approximately 3,000 images for each of 4 different cell types grouped into 4 different folders (according to cell type). The cell types are Eosinophil, Lymphocyte, Monocyte, and Neutrophil. 
 
-Methodology - Training an artificial neural network to identify different blood cell types present within an in image of blood cells. 
- Once we found the dataset that we wanted to use, we wanted to find good accuracy as quickly as possible. We went with a DenseNet implementation and attempted to fine tune its layer widths using a genetic algorithm. Most of our process was tuning hyperparamters. We all would separately test different numbers of epochs, batch sizes, and random layer widths to try and find a good set of hyperparamters to use. Testing different loss functions with our paramaters was something we also did until We found the Negative Log-Likelihood Loss to use with our classifcation. 
+Methodology - Training an artificial neural network to identify different blood cell types present within an in image of blood cells. Once we found the dataset that we wanted to use, we wanted to find good accuracy as quickly as possible. We went with a DenseNet implementation and attempted to fine tune its layer widths using a genetic algorithm. Most of our process was tuning hyperparamters. We all would separately test different numbers of epochs, batch sizes, and random layer widths to try and find a good set of hyperparamters to use. Testing different loss functions with our paramaters was something we also did until We found the Negative Log-Likelihood Loss to use with our classifcation. 
  
 Results - 
 
@@ -81,7 +80,70 @@ Results -
 * Effectiveness in answering questions / 10
 * Overall impression of the poster and its presentation / 10
 
+---
 
+## Outline
+
+### Title
+* Blood Cell Type Classification Using DenseNet and Genetic Algorithms
+* [NAMES]
+* University of Rhode Island
+* CSC/DSP 461 - Fall 2019
+
+### Research Problem and Context
+* Medical science is a fast-growing field servicing an ever-growing population.
+* Reducing time for sample processing can be crucial to effective treatment.
+* Automation in the lab can decrease delays in patient care and increase care efficiency.
+* Can you train a neural network to distinguish between different types of blood cells?
+
+### Data
+* We used the "Blood Cell Images" Kaggle dataset[1] as a basis for our implementation.
+  * 320x240 color images with 4 evenly distributed classes (Eosinophil, Lymphocyte, Monocyte, and Neutrophil).
+  * 9957 training images and 2487 testing images.
+* Our model transformed the data by applying random rotations, scaling to a size of 40x30, and normalizing images.
+  * 99,570 training images, 9957 validation images, 2487 testing images.
+
+### Methodology
+* Test out various approaches (regression, SVM) for initial results.
+* Use Google Colab for quicker runtimes.
+* Experiment and fine-tune hyperparameters for the neural network (# layers, layer widths, batch sizes, epochs, validation %'s).
+* Implement a genetic algorithm to find optimal hyperparameters that maximize test accuracy.
+
+### Model
+* DenseNet161[2] neural network with 5 linear hidden layers.
+  * NLLLoss[3] with Adam optimizer.
+  * 50 epochs, batch size 800, ~9% validation set
+* Genetic Algorithm[4]
+  * Generations of 10 sets of 5 layer widths.
+  * The 3 top-performing members were used to populate the next generation.
+  * 1 member from each generation generated randomly.
+
+### Results
+* Best-performing model with this technique had 95% training accuracy, 48% testing accuracy.
+  * Over all methods tested, ~60% testing accuracy.
+* Low training / validation loss, high testing loss (overtraining).
+* Genetic algorithm proved to do little better than random weight values.
+
+### Discussion
+* Shrinking images drastically increased computation speed but lowered testing accuracy.
+* Increasing number of images increased training accuracy but not testing accuracy.
+* Genetic algorithm hyperparameters need to be more fine-tuned to be effective.
+* Optimal DenseNet hyperparameters were not found for this problem (90% is possible[5]).
+
+### Future Work
+* Multi-class classification
+* Image detection (data available in Kaggle dataset)
+* SVM implementation
+
+### References
+* [1]https://www.kaggle.com/paultimothymooney/blood-cells/kernels
+* [2]https://pytorch.org/hub/pytorch_vision_densenet/
+* [3]https://medium.com/udacity-pytorch-challengers/a-brief-overview-of-loss-functions-in-pytorch-c0ddb78068f7
+* [4]https://towardsdatascience.com/genetic-algorithm-implementation-in-python-5ab67bb124a6
+* [5]https://www.kaggle.com/drobchak1988/blood-cell-images-acc-92-val-acc-90
+* [6]https://pytorch.org/docs/stable.html
+
+---
 
 ### Other implementations
 
