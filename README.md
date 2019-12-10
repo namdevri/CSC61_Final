@@ -188,6 +188,9 @@ print(img_stds.mean(0))
 
 
 ### Final Report
+
+* I uploaded a word doc of what my report looks like with the pictures in it. Couldnt get them to show up on this read me.
+
 Joseph Erickson
 Nathan Mathews
 Anthony Keaveney
